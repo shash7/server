@@ -1,0 +1,76 @@
+// main: app.less
+
+/* ----------------------------------------------------------------
+ * form.less
+ * 
+ * Form components are here
+ * ---------------------------------------------------------------- */
+
+/*
+ * $imports
+ */
+@import 'colors.less';
+@import 'typography.less';
+
+
+// Resets inputs across browsers
+input, textarea {
+	display: inline-block;
+	font-family: 'Helvetica Neue', 'Lucida Sans Unicode';
+	border:none;
+	width:100%;
+	height:auto;
+	box-sizing: border-box;
+	margin: 2px 0;
+}
+
+input[type="button"], input[type="submit"] {
+	display: inline-block;
+	padding: 4px 14px;
+	
+	color:#FFF;
+	background-color: #3498DB;
+	border:#3498DB solid 2px;
+	border-radius: 3px;
+	background-clip: padding-box;
+}
+
+input[type="button"]:hover, input[type="submit"]:hover {
+	border-color: @button-dark;
+}
+
+input[type="button"]:active, input[type="submit"]:active {
+	border-color: @button-dark;
+	background-color: @button-dark;
+}
+
+input[type="button"]:focus, input[type="submit"]:focus {
+	outline: none;
+	border-color: @focus;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+	padding: 4px 14px;
+	border:@border-light-color solid 2px;
+	border-radius: 3px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+	outline: none;
+	border-color: @focus;
+}
+
+textarea {
+	padding: 4px 14px;
+	border:@border-light-color solid 2px;
+	border-radius: 3px;
+}
+
+textarea:focus {
+	outline: none;
+	border-color: @focus;
+}
+
+label {
+	font-size: @text-size;
+}

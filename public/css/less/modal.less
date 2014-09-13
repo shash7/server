@@ -1,0 +1,168 @@
+// main: app.less
+
+/* -------- $modal -------- */
+.modal {
+	position: relative;
+	width:50%;
+	margin:32px auto;
+	
+	opacity:0;
+	visibility:hidden;
+	
+	background-color:#FFF;
+	
+	border-radius:3px;
+	
+	-webkit-box-shadow: 0 1px 4px 1px rgba(0,0,0,0.3);
+box-shadow: 0 1px 4px 1px rgba(0,0,0,0.3);
+	
+	-webkit-transform: translate(0px, 0px);
+	-moz-transform: translate(0px, 0px);
+	-o-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transform: translate(0px, 0px);
+	
+-webkit-transition: all 250ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+   -moz-transition: all 250ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+     -o-transition: all 250ms cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+        transition: all 250ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.modal.active {
+	opacity:1;
+	visibility:visible;
+	-webkit-transform: translate(0px, 128px);
+	-moz-transform: translate(0px, 128px);
+	-o-transform: translate(0px, 128px);
+	-ms-transform: translate(0px, 128px);
+	transform: translate(0px, 128px);
+}
+
+.modal-outer {
+  overflow: auto;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+	visibility:hidden;
+  -webkit-overflow-scrolling: touch;
+	
+	-webkit-perspective: 1500px;
+	-moz-perspective: 1500px;
+	-o-perspective: 1500px;
+	-ms-perspective: 1500px;
+	perspective: 1500px;
+	-webkit-perspective-origin: 0%, 0%;
+	-moz-perspective-origin: 0%, 0%;
+	-o-perspective-origin: 0%, 0%;
+	-ms-perspective-origin: 0%, 0%;
+	perspective-origin: 0%, 0%;
+	
+  outline: 0;
+}
+
+.modal-outer.active {
+	visibility:visible;
+	z-index:999;
+}
+
+.blanket {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 998;
+	opacity: 0;
+	background: rgba(255,255,255,0.6);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.blanket.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+body.modal-open {
+	overflow:hidden;
+}
+
+.modal-head {
+	position:relative;
+	padding:16px;
+	border-bottom:#777 solid 1px;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.modal-body {
+	position:relative;
+	padding:16px;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.modal-footer {
+	position:relative;
+	padding:16px;
+	border-top:#777 solid 1px;
+	
+	background-color:rgba(0,0,0,0.02);
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.modal-close {
+	height: 32px;
+	width: 32px;
+	overflow: auto;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 20px;
+	left: auto;
+  text-align: right;
+	
+	border:#555 solid 1px;
+	
+	border-radius:3px;
+}
+
+.modal-close:after {
+	display:inline-block;
+	width:32px;
+	height:32px;
+	content:'x';
+	font-family:verdana, helvetica, arial, sans-serif;
+	font-weight:bold;
+	font-size:24px;
+	line-height:28px;
+	text-align:center;
+}
+
+.modal-close:hover {
+	background-color:#555;
+	color:#FFF;
+	
+	cursor:pointer;
+}
+
+.modal-close:active {
+	background-color:#333;
+	color:#FFF;
+	
+	cursor:pointer;
+}

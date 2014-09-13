@@ -1,0 +1,132 @@
+// main: app.less
+
+/* ----------------------------------------------------------------
+ * components.less
+ * 
+ * Site components like header, footer, etc as well as generic components like message, container, etc come in here
+ * 
+ * Menu :
+ * 	imports
+ * 	header
+ * 	body
+ * 	avatar
+ * ---------------------------------------------------------------- */
+
+/*
+ * $imports
+ */
+@import 'colors.less';
+@import 'typography.less';
+@import 'z-index.less';
+
+
+/*
+ * $header
+ */
+.site-header {
+	top:0;
+	width:100%;
+}
+
+.site-nav {
+	width:70%;
+	margin:0 auto;
+}
+
+.site-nav-item {
+	display: inline-block;
+	float: right;
+	height:48px;
+	padding: 2px 12px;
+	box-sizing: border-box;
+	
+	color:@header-text-color;
+	font-size: 0.9em;
+	line-height: 2.6;
+	text-align: center;
+
+	cursor: pointer;
+}
+
+.site-nav-item:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+.site-nav-item:active {
+	background-color: rgba(0,0,0,0.2);
+}
+
+.site-title.site-nav-item {
+	float: left;
+	margin: 0;
+	
+	font-size: 36px;
+	line-height: 1.2;
+}
+
+
+/*
+ * $body
+ */
+.site-body {
+	width:70%;
+	margin: 0 auto;
+}
+
+.site-body-container {
+	padding: 32px;
+	box-sizing: border-box;
+}
+
+.container.sidebar {
+	border:rgba(0,0,0,0.1) solid 1px;
+	background-color: @container-color;
+}
+
+.clearfix:after {
+	display: block;
+	clear: both;
+	content : '';
+}
+
+/*
+ * $post
+ */
+.post-content {
+	display: inline-block;
+	padding-right: 16px;
+	width: 70%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.content {
+	max-width: 100%;
+	height: auto;
+}
+
+.post-info {
+	display: inline-block;
+	width: 30%;
+	float: left;
+}
+
+.post-author {
+	font-size: @text-size;
+	vertical-align: top;
+	margin: 0 4px;
+}
+
+.post-text {
+	font-size: @p-size;
+}
+
+
+/*
+ * $avatar
+ */
+.avatar {
+	display: inline-block;
+	width:32px;
+	height:32px;
+	border-radius: 3px;
+}
